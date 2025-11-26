@@ -1,0 +1,33 @@
+     <%-include('../cabecalho.ejs')%>
+     <header>
+        <h3>Adicionar Nova Marca</h3>
+      </header>
+      <div class="content">
+        <form id="form-perifericos" autocomplete="off" action="/perifericos/add/ok" method="post">
+          <div class="grid">
+
+            <label for="nome">Periferico a ser adicionado</label>
+              <input id="nome" name="nome" type="text" placeholder="Ex:Mouse 2050 DPI" required>
+            </div>
+
+
+
+            <label for="marca">Marca</label>
+              <input id="marca" name="marca" type="text" placeholder="Ex:Redragon" required>
+            </div>
+
+
+
+            <div>
+              <label for="preco">Preço (R$)</label>
+              <input id="preco" name="preco" type="number" placeholder="0,00" min="0" step="0.01" required>
+            </div>
+            
+          <footer>
+            <a type="button" class="btn ghost" id="btn-cancelar" href="/perifericos/lst">Cancelar</a>
+            <button type="submit" class="btn primary">Adicionar Marca</button>
+          </footer>
+        </form>
+      </div>
+
+      <%-include('../rodape.ejs')%>

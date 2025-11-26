@@ -1,0 +1,44 @@
+ <%-include('../cabecalho.ejs')%>
+     <header>
+        <h3>Adicionar Novo Celular</h3>
+      </header>
+      <div class="content">
+        <form id="form-placaVideo" autocomplete="off" action="/celular/add/ok" method="post">
+          <div class="grid">
+            <div>
+              <label for="nome">Nome do Celular</label>
+              <input id="nome" name="nome" type="text" placeholder="Ex: Xiaomi 51 Ultra" required>
+            </div>
+
+            <div>
+              <label for="marca">Marca</label>
+              <select id="marca" name="marca" required>
+                <option value="" disabled selected>Selecione a marca</option>
+                <option>Samsung</option>
+                <option>Motorola</option>
+                <option>Xiaomi</option>
+                <option>Iphone</option>
+
+          </select>
+
+            </div>
+
+            <div>
+              <label for="preco">Preço (R$)</label>
+              <input id="preco" name="preco" type="number" placeholder="0,00" min="0" step="0.01" required>
+            </div>
+            <div>
+              <label for="ano">Ano de Fabricação</label>
+              <input id="ano" name="ano" type="number" value="2024" min="1900" max="2099" required>
+            </div>
+            
+          
+
+          <footer>
+            <a type="button" class="btn ghost" id="btn-cancelar" href="/celular/lst">Cancelar</a>
+            <button type="submit" class="btn primary">Adicionar Celular</button>
+          </footer>
+        </form>
+      </div>
+
+      <%-include('../rodape.ejs')%>

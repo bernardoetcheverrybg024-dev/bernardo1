@@ -1,0 +1,21 @@
+     <%-include('../cabecalho.ejs')%>
+     <header>
+        <h3>Adicionar Novo kit</h3>
+      </header>
+      <div class="content">
+        <form id="form-placaVideo" autocomplete="off" action="/kitUpgrade/add/ok" method="post"
+        enctype="multipart/form-data">
+          <div class="grid">
+            <div>
+              <label for="foto">foto</label>
+              <input id="foto" name="foto"type="file">
+            </div>
+           <div class="field-help">Os campos com * são obrigatórios.</div>
+          <footer>
+            <a type="button" class="btn ghost" id="btn-cancelar" href="/placaVideo/lst">Cancelar</a>
+            <button type="submit" class="btn primary">Adicionar Marca</button>
+          </footer>
+        </form>
+      </div>
+
+      <%-include('../rodape.ejs')%>

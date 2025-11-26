@@ -1,0 +1,41 @@
+<%-include('../cabecalho.ejs')%>
+<section class="section">
+  <div style="display:flex; align-items:end; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+    <div>
+      <h2>Instrumentos Musicais</h2>
+      <p>Gerencie sua coleção de instrumentos</p>
+    </div>
+    <div class="actions">
+      <a href="/perifericos/add" class="btn primary">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 5a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H6a1 1 0 110-2h5V6a1 1 0 011-1z"/></svg>
+        Adicionar Marca
+      </a>
+    </div>
+  </div>
+
+  <div class="table-wrap" style="margin-top:14px;">
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          
+          <th class="actions-cell">Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+       
+     
+          <%Perifericos.forEach(perifericos=>{%>
+          <tr>         
+          <td><%=perifericos.nome%></td>
+          <td><%=perifericos.marca%></td>
+          <td><%=perifericos.preco%></td>
+        </tr>
+          <%});%>
+    
+    </tbody>
+    </table>
+  </div>
+</section>
+
+<%-include('../rodape.ejs')%>
